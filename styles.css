@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:visited{
+    color: inherit;
+}
+
+/*#region*/
+main{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: 3fr 2.5fr 10fr 1fr;
+}
+    
+.header{
+    grid-area: 1 / 1 / 2 / 4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #162447;
+
+    font-family: 'Press Start 2P', cursive;
+}
+
+.sort-menu{
+    grid-area: 2 / 1 / 4 / 2;
+
+    background: #1b1b2f;
+    font-family: 'Russo One', sans-serif;
+    color: white;
+}
+
+.array-menu{
+    grid-area: 2 / 2 / 3 / 3;
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #1f4068;
+}
+
+.visualizer{
+    grid-area: 3 / 2 / 4 / 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+    background: lightgray;
+}
+
+.footer{
+    grid-area: 4 / 1 / 5 / 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #1b1b2f;
+
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer p{
+    margin: 20px;
+    font-size: 0.9em;
+}
+/*#endregion*/
+
+#array{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    list-style: none;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 1024px;
+    height: 600px;
+}
+
+.arrayElement{
+    flex: 1;
+}
+
+.comparing{
+    background: magenta !important;
+}
+
+.verifying{
+    background: lime !important;
+}
+
+.arrayButton{
+    font-size: large;
+    padding: 10px;
+    margin-left: 100px;
+    font-family: 'Russo One', sans-serif;
+    min-width: 150px;
+    background-color: lightgray;
+
+    border-radius: 8px;
+    border: none;
+}
+
+.arrayButton:hover{
+    background-color: darkgray;
+}
+
+button{
+    cursor: pointer;
+}
+
+.selected{
+    color: lime !important;
+}
+
+.sort-menu input{
+    color: white;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.sort-menu label{
+    font-size: 1.25em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sort-menu input:checked + label{
+    font-weight: bold;
+    color: lightskyblue;
+}
+
+.sort-menu p{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 2em;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Sort</title>
+    <link rel="icon" type="image/png" href="img\favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <script src="sorts.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<body>
+    <main>
+        <header class="header"><h1>Sorting Algorithm Visualizer</h1></header>
+        <div class="sort-menu">
+            <p>Select an algorithm:</p>
+            <form>
+                <input type="radio" name="sortSelection" id="bubble" checked>    
+                <label for="bubble">Bubble Sort</label><br>
+                <input type="radio" name="sortSelection" id="insertion"> 
+                <label for="insertion">Insertion Sort</label><br>
+                <input type="radio" name="sortSelection" id="quick">     
+                <label for="quick">Quick Sort</label><br>
+                <input type="radio" name="sortSelection" id="gnome">     
+                <label for="gnome">Gnome Sort</label><br>
+                <input type="radio" name="sortSelection" id="odd-even">  
+                <label for="odd-even">Odd-even Sort</label><br>
+                <input type="radio" name="sortSelection" id="cocktail">  
+                <label for="cocktail">Cocktail Sort</label>
+            </form>
+        </div>
+        <div class="array-menu">
+            <div><button class="arrayButton" id="sort">Sort</button></div>
+            <div><button class="arrayButton" id="stop" disabled>Stop</button></div>
+            <div>
+                <button class="arrayButton" id="random">Generate Random Array</button>
+                <input id="slider" type="range" value="3" max="6" oninput="fillArray()">
+            </div>
+            <div><button class="arrayButton" id="shuffle">Shuffle Array</button></div>
+            <div><button class="arrayButton" id="reverse">Reverse Array</button></div>
+        </div>
+        <div class="visualizer">
+            <div id="array"></div>
+        </div>
+        <footer class="footer">
+            <p>Made by Danial Madson • <a target="_blank" href="https://github.com/danereno">https://github.com/danereno</a></p>
+        </footer>
+    </main>
+</body>
+</html>
